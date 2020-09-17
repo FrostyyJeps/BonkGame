@@ -19,7 +19,7 @@ export default class Ball {
             this.position.x,
             this.position.y,
             this.size,
-            this.siz
+            this.size
         );
     }
 
