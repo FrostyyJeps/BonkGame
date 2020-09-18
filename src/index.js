@@ -1,5 +1,4 @@
-import Paddle from './paddle.js';
-import Game from './game.js';
+import Game from "./game.js";
 
 let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext('2d');
@@ -9,12 +8,12 @@ const GAME_HEIGHT = 600;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 
-
-paddle.draw(ctx);
+// DEN HER DRILLEDE I SÅ LANGT TID OG VAR SKYLD I INTET VIRKEDE 😡😡
+// paddle.draw(ctx);
 
 let lastTime = 0;
 
-let imgBall = document.getElementById('img_ball');
+// let imgBall = document.getElementById('img_ball');
 
 function gameLoop(timestamp){
     

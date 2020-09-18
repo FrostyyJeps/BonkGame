@@ -1,9 +1,8 @@
-import Paddle from './paddle.js';
-import InputHandler from './input.js';
-import Ball from './ball.js';
-import Brick from './brick.js';
+import Paddle from "./paddle.js";
+import Ball from "./ball.js";
+import InputHandler from "./input.js";
 
-import { buildLevel, level1, level2 } from './levels.js';
+import { buildLevel, level1, level2 } from "./levels.js";
 
 const GAMESTATE = {
     PAUSED: 0,
@@ -34,7 +33,7 @@ export default class Game {
         this.levels = [level1, level2];
         this.currentLevel = 0;
 
-        new InputHandler(paddle, this);
+        new InputHandler(Paddle, this);
 
     }
 
@@ -103,7 +102,7 @@ export default class Game {
 
         if (this.gamestate === GAMESTATE.MENU) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-            ctx.fillStyle = "rgba(0,0,0,0.1)";
+            ctx.fillStyle = "rgba(0,0,0,0.5)";
             ctx.fill();
 
             ctx.font = "30px Arial";
