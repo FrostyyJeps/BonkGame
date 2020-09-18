@@ -14,6 +14,7 @@ export function detectCollision(ball, gameObject){
     let bottomOfObject = gameObject.position.y + gameObject.height;
 
     if (
+        
         bottomOfBall >= topOfObject && 
         
         topOfBall <= bottomOfObject &&

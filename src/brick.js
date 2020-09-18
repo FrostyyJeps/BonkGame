@@ -3,6 +3,7 @@ import { detectCollision } from './collisionDetection.js';
 export default class Brick {
 
     constructor(game, position) {
+
         this.image = document.getElementById("img_brick");
 
         this.gameWidth = game.gameWidth;
@@ -18,6 +19,7 @@ export default class Brick {
     }
 
     update() {
+
         if(detectCollision(this.game.ball, this)) {
             this.game.ball.speed.y = -this.game.ball.speed.y;
 
@@ -26,6 +28,7 @@ export default class Brick {
     }
 
     draw(ctx) {
+        
         ctx.drawImage(
             this.image,
             this.position.x,

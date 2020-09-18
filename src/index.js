@@ -17,6 +17,7 @@ let lastTime = 0;
 let imgBall = document.getElementById('img_ball');
 
 function gameLoop(timestamp){
+    
     let deltaTime = timestamp - lastTime;
     lastTime = timestamp;
 
