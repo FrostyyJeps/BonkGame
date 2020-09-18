@@ -8,12 +8,7 @@ const GAME_HEIGHT = 600;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 
-// DEN HER DRILLEDE I SÅ LANGT TID OG VAR SKYLD I INTET VIRKEDE 😡😡
-// paddle.draw(ctx);
-
 let lastTime = 0;
-
-// let imgBall = document.getElementById('img_ball');
 
 function gameLoop(timestamp){
     

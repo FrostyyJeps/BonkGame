@@ -33,7 +33,7 @@ export default class Game {
         this.levels = [level1, level2];
         this.currentLevel = 0;
 
-        new InputHandler(Paddle, this);
+        new InputHandler(this.paddle, this);
 
     }
 
@@ -56,18 +56,18 @@ export default class Game {
     }
 
     update(deltaTime) {
-
+        
         if (this.lives === 0) this.gamestate = GAMESTATE.GAMEOVER;
-
+        
         if (
             this.gamestate == GAMESTATE.PAUSED ||
             this.gamestate === GAMESTATE.MENU ||
             this.gamestate === GAMESTATE.GAMEOVER
         )
             return;
-
+        
         if(this.bricks.length === 0) {
-
+            
             this.currentLevel++;
 
             this.gamestate = GAMESTATE.NEWLEVEL;
@@ -82,7 +82,7 @@ export default class Game {
         
         );
 
-        this.bricks = this.bricks.filter(brick => !object.markedForDeletion);
+        this.bricks = this.bricks.filter(brick => !brick.markedForDeletion);
     }
 
     draw(ctx) {
@@ -102,14 +102,14 @@ export default class Game {
 
         if (this.gamestate === GAMESTATE.MENU) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-            ctx.fillStyle = "rgba(0,0,0,0.5)";
+            ctx.fillStyle = "rgba(0,0,0,1)";
             ctx.fill();
 
             ctx.font = "30px Arial";
             ctx.fillStyle = "white";
             ctx.textAllign = "center";
             ctx.fillText("Press SPACEBAR To Start",
-                this.gameWidth / 2,
+                this.gameWidth / 3.5,
                 this.gameHeight / 2
             );
 
