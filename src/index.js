@@ -1,5 +1,5 @@
-import Paddle from "./paddle.js";
-import Game from "./game.js";
+import Paddle from './paddle.js';
+import Game from './game.js';
 
 let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext('2d');
